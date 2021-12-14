@@ -6,22 +6,10 @@ public class ProgramLogic {
 
     public void runProgram() {
         boolean repeat;
-//        boolean firstRepeat;
-//        boolean secondRepeat;
         do {
             menu.printMenu();
             repeat = repeatProgram(read.getInt());
         } while (repeat);
-
-//        do {
-//            menu.printFirstSubMenu();
-//            firstRepeat = firstSubMenu(read.getInt());
-//        } while (firstRepeat);
-//
-//        do {
-//            menu.printSecondSubMenu();
-//            secondRepeat = secondSubMenu(read.getInt());
-//        } while (secondRepeat);
     }
 
     private boolean repeatProgram(int number) {
