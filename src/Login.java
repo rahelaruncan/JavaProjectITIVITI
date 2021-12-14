@@ -3,20 +3,25 @@ import java.util.HashMap;
 public class Login {
     ProgramLogic logic = new ProgramLogic();
     private final HashMap<String, String> USERS_AND_PASS = new HashMap<>();
-    int totalAttempts = 3;
+    final int MAX_ATTEMPT = 3;
 
     public void logInOrTryAgain() {
-        while (totalAttempts != 0) {
+        int remainingAttempts = MAX_ATTEMPT;
+        while (remainingAttempts > 0) {
             if (checkCredentials()) {
                 logic.runProgram();
+                return;
             } else {
-                System.out.println("Incearca din nou");
-                System.out.println("Mai ai" + (totalAttempts-1) + " incercari");
-                totalAttempts--;
-                checkCredentials();
+                if (remainingAttempts > 1) {
+                    System.out.println("Incearca din nou");
+                    remainingAttempts--;
+                    System.out.println("Mai ai " + remainingAttempts + " incercari");
+                } else {
+                    remainingAttempts--;
+                }
             }
         }
-        if (totalAttempts == 0) {
+        if (remainingAttempts == 0) {
             System.out.println("Maximum number of attempts exceeded");
         }
     }
@@ -28,7 +33,7 @@ public class Login {
         String x = read.getString();
         System.out.println("Enter password:");
         String y = read.getString();
-        return USERS_AND_PASS.get(x).equals(y);
+        return USERS_AND_PASS.get(x) != null && USERS_AND_PASS.get(x).equals(y);
     }
 
     private void initUserList() {

@@ -37,7 +37,7 @@ public class ReadFromKeyboard {
         List<Integer> myList = new ArrayList<>();
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter list values, type exit for end:");
+        System.out.println("Enter list values, type exit for end of the list:");
         do {
             try {
                 int value = scan.nextInt();

@@ -30,7 +30,7 @@ public class MenuOptions {
     }
 
     protected void doToFastTrackOrNotToFastTrack() {
-        System.out.println("Enter the value for F degrees: ");
+        System.out.println("Enter the value for FastTrack: ");
         System.out.println("The degrees in C are: " +
                 logOp.toFastTrackOrNotToFastTrack(read.getString(),read.getInt()));
     }
