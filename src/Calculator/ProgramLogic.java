@@ -1,3 +1,5 @@
+package Calculator;
+
 public class ProgramLogic {
 
     ReadFromKeyboard read = new ReadFromKeyboard();

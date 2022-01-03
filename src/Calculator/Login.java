@@ -1,3 +1,5 @@
+package Calculator;
+
 import java.util.HashMap;
 
 public class Login {
@@ -40,7 +42,7 @@ public class Login {
         USERS_AND_PASS.put("Cosmin", "pass");
         USERS_AND_PASS.put("s", "pass");
         USERS_AND_PASS.put("z", "pass");
-        USERS_AND_PASS.put("a", "pass");
+        USERS_AND_PASS.put("AnimalRescuer", "pass");
         USERS_AND_PASS.put("q", "pass");
     }
 }
